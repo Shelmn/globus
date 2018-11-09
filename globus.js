@@ -6,6 +6,7 @@ var webdriver = require('selenium-webdriver'),
 
 var login = settings.login;
 var password = settings.password;
+var donor = settings.account_donor;
 var log4js = require('log4js');
 log4js.configure({
     appenders: {'file': {type: 'file', filename: 'instabot.log'}},
@@ -25,3 +26,12 @@ browser.findElement(by.xpath('//*[@id="email"]')).sendKeys(login);
 browser.findElement(by.xpath('//*[@id="pass"]')).sendKeys(password);
 browser.sleep(1000);
 browser.findElement(by.xpath('//*[@id="login_button"]')).click();
+browser.get(donor);
+browser.findElement(by.xpath('//*[@id="wide_column"]/div[1]/div[2]/a[1]')).click();
+for (var i = 1; i < settings.subcount; i++) {
+    browser.findElement(by.xpath('/*[@id="fans_rowsfans"]/div['+i+']/div[2]/a')).getText().then(
+        function (a) {
+            console.log(a);
+        }
+    );
+}
