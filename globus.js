@@ -24,4 +24,4 @@ browser.get('https://vk.com/login');
 browser.findElement(by.xpath('//*[@id="email"]')).sendKeys(login);
 browser.findElement(by.xpath('//*[@id="pass"]')).sendKeys(password);
 browser.sleep(1000);
-browser.findElement(by.xpath('//*[@id="login_button"]'));
+browser.findElement(by.xpath('//*[@id="login_button"]')).click();
