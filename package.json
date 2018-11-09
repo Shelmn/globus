@@ -1,0 +1,20 @@
+{
+  "name": "Instagram_likebot",
+  "version": "1.0.0",
+  "description": "Instagram like bot",
+  "main": "none",
+  "dependencies": {
+    "chromedriver": "^2.35.0",
+    "file-system": "",
+    "log4js": "",
+    "node-telegram-bot-api": "^0.30.0",
+    "phantomjs": "^1.9.20",
+    "promise": "",
+    "read": "^1.0.7",
+    "selenium-webdriver": "^2.48.2"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": "Alexey K",
+  "license": ""
+}
